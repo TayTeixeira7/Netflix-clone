@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #141414;
+    --text: #ffffff;
+    --text-profiles: #b3b3b3;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.9rem;
+    margin-bottom: 2rem;
+    color: var(--text);
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    /*grid-template-columns: repeat(3, minmax(150px, 200px));*/
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile a {
+    text-decoration: none;
+}
+
+.profile {
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+.profile figure {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+}
+
+.profile img {
+    width: 100%;
+    aspect-ratio: 1 / 1;      /* Define que a imagem sempre será um quadrado perfeito */
+    object-fit: cover;       /*faz a imagem preencher o quadrado sem esticar*/
+    object-position: center;     /*garante que o rosto (centro) seja priorizado no corte*/
+    display: block;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.profile img:hover {
+    border: 3px solid var(--text);
+    transform: translateY(-4px);
+}
+
+.profile figcaption {
+    font-size: 1rem;
+    color: var(--text-profiles);
+    letter-spacing: 0.02em;
+}
+
+.profile:hover figcaption {
+    color: var(--text);
+}
+
+@media (max-width: 720px) {
+    .profiles {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .profiles {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+}
+
