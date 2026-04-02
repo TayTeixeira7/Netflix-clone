@@ -133,7 +133,7 @@ export const categories = [
                 img: "https://m.media-amazon.com/images/S/pv-target-images/29a0184bba94b27b4e74e74aab60c4492e9a6c332c35be4ecc435f8ba2aeb8f1.jpg", top10: true, badge: "Clássico", badgeColor: "red", 
                 progress: 0, age: 14,
                 tags: ["Distópico", "Imaginativo", "Cyberpunk"],
-                youtube: "https://www.youtube.com/watch?v=9Ne9ATyqwrU"
+                youtube: "https://www.youtube.com/watch?v=dtwpjnuaVTE"
             },
             {
                 img: "https://i.ytimg.com/vi/ROZvObw2gdk/maxresdefault.jpg", 
